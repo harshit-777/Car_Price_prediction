@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Car Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Car Price Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App For Predicting Used Car.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="Year" placeholder="Year (Eg: 2014)"><br>
+
+                <input class="form-input" type="text" name="Owner_Type" placeholder="Owner Type (Eg: 2 )"><br>
+
+                <input class="form-input" type="text" name="Mileage" placeholder="Mileage (Eg: 19.10)"><br>
+
+
+                <input class="form-input" type="text" name="Engine" placeholder="Engine (Eg: 1500)"><br>
+
+
+                <input class="form-input" type="text" name="Power" placeholder="Power (Eg: 120.50)"><br>
+
+
+                <input class="form-input" type="text" name="Seats" placeholder="Seats (Eg: 4)"><br>
+
+
+                <input class="form-input" type="text" name="Fuel_Type" placeholder="Fuel Type (Petrol/Diesel/CNG/LPG)"><br>
+
+                
+                <input class="form-input" type="text" name="Transmission" placeholder="Transmission (Automatic/Manual)"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
